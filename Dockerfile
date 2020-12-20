@@ -14,6 +14,8 @@ RUN echo ${HOME}
 WORKDIR ${HOME}
 
 COPY Gemfile* ./
+# COPY wait-for-it.sh /wait-for-it.sh
+# RUN chmod +x /wait-for-it.sh
 
 RUN apk update && \
     apk upgrade && \
