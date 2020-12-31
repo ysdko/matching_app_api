@@ -9,6 +9,7 @@ class User < ApplicationRecord
                       length: { minimum: 8 },
                       format: {
                         with: VALID_PASSWORD_REGEX
+                        message: :invalid_password
                       },
                       allow_blank: true
   validates :activated, inclusion: { in: [ true, false ] }
